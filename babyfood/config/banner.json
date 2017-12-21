@@ -1,15 +1,61 @@
-[
 {
-'img':'',
-'type':'url',
-'cuise_id':0
-},
-{'img':'',
-'type':'url',
-'cuise_id':0
-},
-{'img':'',
-'type':'local',
-'cuise_id':123
+"banner":[
+        {
+        'img':'http://originoo-1.b0.upaiyun.com/dev/sites/image/bg_directory_pic01_fac96eaa.jpg',
+        'type':'url',
+        'cuise_id':0
+        },
+        {
+        'img':'http://originoo-1.b0.upaiyun.com/dev/sites/image/bg_directory_pic05_5942b722.jpg',
+        'type':'url',
+        'cuise_id':0
+        },
+        {
+        'img':'http://originoo-1.b0.upaiyun.com/dev/sites/image/bg_directory_pic04_f80208cc.jpg',
+        'type':'local',
+        'cuise_id':123
+        }
+    ],
+  "navigation":[
+    {
+      'type':1,
+      'url':'',
+      'name':'2-3个月'
+    },
+    {
+      'type':2,
+      'url':'',
+      'name':'2-3个月'
+    },
+    {
+      'type':3,
+      'url':'',
+      'name':'2-3个月'
+    },
+    {
+      'type':4,
+      'url':'',
+      'name':'2-3个月'
+    },
+    {
+      'type':5,
+      'url':'',
+      'name':'2-3个月'
+    },
+    {
+      'type':6,
+      'url':'',
+      'name':'2-3个月'
+    },
+    {
+      'type':7,
+      'url':'',
+      'name':'2-3个月'
+    },
+    {
+      'type':8,
+      'url':'',
+      'name':'2-3个月'
+    }
+  ]
 }
-]
