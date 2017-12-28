@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>宝宝食谱哈</title>
+		<style type="text/css">
+			body {font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 12px;color: #1d1007; line-height:24px} 
+		</style>
+	</head>
+	<body style="margin-left: 20px; margin-right: 20px;">
+		<div id="app">
+			<h1 style="text-align: center;color: #ff4500;">{{title}}</h1>
+			<span>{{time}}</span>
+			<span style="float: right;">{{subject}}</span>
+			<hr style="height:1px;border:none;border-top:1px dashed #ff4500;" />
+			<div style="text-align: center;margin: 20px auto;">
+				<img v-bind:src="img" style="margin:0 auto;"/>
+			</div>
+			<div style="clear:both;">
+				<div style="clear: both;" v-if="age">
+					<span style="font-weight: bold;float: left;">适合年龄:</span>
+					<span>{{age}}</span>
+				</div>
+				<div style="clear: both;">
+					<span style="font-weight: bold;float: left;">原料:</span>
+					<span style="clear:both;float: left;">{{material}}</span>
+				</div>
+				<div style="clear: both;">
+					<span style="float:left;font-weight: bold;">做法:</span>
+					<div style="float: left;"><span  v-for="step in steps">{{step}}</span></div>
+				</div>
+				<div style="clear: both;" v-if="tips">
+					<span style="float:left;font-weight: bold;">营养提示:</span>
+					<span>{{tips}}</span>
+				</div>
+			</div>
+		</div>
+		<script src="bugaixilie.js"></script>
+		<script src="../js/vue.min.js"></script>
+		<script type="text/javascript">
+			var vue = new Vue({
+				el:'#app',
+				data:{
+					title:'',
+					subject:'',
+					time:'',
+					img:'',
+					age:'',
+					material:'',
+					steps:[],
+					tips:''
+				}
+			});
+			var name = window.location.hash;
+			if(name){
+				name = name.replace(/#/,"");
+			}
+			var obj = data[name];
+			if(obj){
+				vue.title = obj.title;
+				vue.subject = obj.subject;
+				vue.time = obj.time;
+				vue.img = obj.img;
+				vue.age = obj.age;
+				vue.material = obj.material;
+				vue.steps = obj.steps;
+				vue.tips = obj.tips;
+			}
+		</script>
+	</body>
+</html>
