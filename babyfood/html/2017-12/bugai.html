@@ -10,6 +10,8 @@
 			body {font-family: Verdana, Arial, Helvetica, sans-serif;
 					font-size: 12px;color: #1d1007; line-height:24px} 
 		</style>
+		<script src="bugaixilie.js"></script>
+		<script src="../js/vue.min.js"></script>
 	</head>
 	<body style="margin-left: 20px; margin-right: 20px;">
 		<div id="app">
@@ -39,8 +41,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="bugaixilie.js"></script>
-		<script src="../js/vue.min.js"></script>
+		
+		
 		<script type="text/javascript">
 			var vue = new Vue({
 				el:'#app',
@@ -69,6 +71,15 @@
 				vue.material = obj.material;
 				vue.steps = obj.steps;
 				vue.tips = obj.tips;
+			}
+			if(window.app){
+				window.app.showOptionMenu("icon_share","","share");
+			}
+			
+			function share(){
+				if(window.app && obj){
+					window.app.share(vue.title,vue.subject,window.location.href,"https://hackwind.github.io/babyfood/html" + vue.img.replace("..",""));
+				}
 			}
 		</script>
 	</body>
