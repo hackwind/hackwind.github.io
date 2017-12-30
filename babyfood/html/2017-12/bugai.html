@@ -12,12 +12,17 @@
 		</style>
 		<script src="bugaixilie.js"></script>
 		<script src="../js/vue.min.js"></script>
+		<style type="text/css">
+			[v-cloak]{
+				display:none;
+			}
+		</style>
 	</head>
 	<body style="margin-left: 20px; margin-right: 20px;">
 		<div id="app">
-			<h1 style="text-align: center;color: #ff4500;">{{title}}</h1>
-			<span>{{time}}</span>
-			<span style="float: right;">{{subject}}</span>
+			<h1 style="text-align: center;color: #ff4500;" v-cloak>{{title}}</h1>
+			<span v-cloak>{{time}}</span>
+			<span style="float: right;"  v-cloak>{{subject}}</span>
 			<hr style="height:1px;border:none;border-top:1px dashed #ff4500;" />
 			<div style="text-align: center;margin: 20px auto;">
 				<img v-bind:src="img" style="margin:0 auto;"/>
@@ -25,19 +30,19 @@
 			<div style="clear:both;">
 				<div style="clear: both;" v-if="age">
 					<span style="font-weight: bold;float: left;">适合年龄:</span>
-					<span>{{age}}</span>
+					<span  v-cloak>{{age}}</span>
 				</div>
 				<div style="clear: both;">
 					<span style="font-weight: bold;float: left;">原料:</span>
-					<span style="clear:both;float: left;">{{material}}</span>
+					<span style="clear:both;float: left;"  v-cloak>{{material}}</span>
 				</div>
 				<div style="clear: both;">
 					<span style="float:left;font-weight: bold;">做法:</span>
-					<div style="float: left;"><span  v-for="step in steps">{{step}}</span></div>
+					<div style="float: left;"><span  v-for="step in steps" style="clear: both;float: left;" v-cloak>{{step}}</span></div>
 				</div>
 				<div style="clear: both;" v-if="tips">
 					<span style="float:left;font-weight: bold;">营养提示:</span>
-					<span>{{tips}}</span>
+					<span v-cloak>{{tips}}</span>
 				</div>
 			</div>
 		</div>
