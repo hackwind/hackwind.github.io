@@ -19,23 +19,23 @@
   "navigation":[
     {
       'type':1,
-      'url':'',
-      'name':'2-3个月'
+      'url':'http://www.dianmi.site/babyfood/config/navi/love_l.png',
+      'name':'4-6个月'
     },
     {
       'type':2,
-      'url':'',
-      'name':'2-3个月'
+      'url':'http://www.dianmi.site/babyfood/config/navi/love_o.png',
+      'name':'7-9个月'
     },
     {
       'type':3,
-      'url':'',
-      'name':'2-3个月'
+      'url':'http://www.dianmi.site/babyfood/config/navi/love_v.png',
+      'name':'10-12个月'
     },
     {
       'type':4,
-      'url':'',
-      'name':'2-3个月'
+      'url':'http://www.dianmi.site/babyfood/config/navi/love_e.png',
+      'name':'13-18个月'
     },
     {
       'type':5,
