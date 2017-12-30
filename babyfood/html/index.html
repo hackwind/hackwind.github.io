@@ -14,6 +14,11 @@
 		<link rel="stylesheet" type="text/css" href="css/app.css" />
 		<script type="text/javascript" src="2017-12/bugaixilie.js" ></script>
 		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<style type="text/css">
+			[v-cloak]{
+				display:none;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -21,16 +26,16 @@
 		<div class="mui-content" id="app">
 			
 			<div class="mui-card" v-for="(item,index) in items">
-				<div class="mui-card-header">{{item.subject}}({{index+1}})----{{item.title}}</div>
+				<div class="mui-card-header" v-cloak>{{item.subject}}({{index+1}})----{{item.title}}</div>
 				<div class="mui-card-header mui-card-media" v-bind:style="'height:40vw;background-image:url('+item.img+')'"></div>
 				<div class="mui-card-content">
 					<div class="mui-card-content-inner">
-						<p style="color: #333;" v-if="item.age">适合年龄：{{item.age}}</p>
-						<p style="color: #333;" v-if="item.tips">营养提示：{{item.tips}}</p>
+						<p style="color: #333;" v-if="item.age" v-cloak>适合年龄：{{item.age}}</p>
+						<p style="color: #333;" v-if="item.tips" v-cloak>营养提示：{{item.tips}}</p>
 					</div>
 				</div>
 				<div class="mui-card-footer">
-					<p>{{item.time}}</p>
+					<p v-cloak>{{item.time}}</p>
 					<a class="mui-card-link" v-bind:href="'tony://open?url=http://hackwind.github.io/babyfood/html/2017-12/bugai.html#'+item.english">阅读全文</a>
 				</div>
 			</div>
